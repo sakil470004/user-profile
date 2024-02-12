@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -16,7 +15,9 @@ function App() {
         newObj['email']=newData?.email;
         newObj['name']=`${newData?.name?.title}. ${newData?.name?.first} ${newData?.name?.last}`;
         newObj['location']=newData?.location;
+        newObj['picture']=newData?.picture?.large;
         setUser(newObj)
+        // console.log()
       });
   }, []);
 
@@ -30,7 +31,7 @@ function App() {
                 <div className="relative">
                   <img
                     alt="..."
-                    src="https://randomuser.me/api/portraits/women/88.jpg"
+                    src={user?.picture}
                     className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                   />
                 </div>
