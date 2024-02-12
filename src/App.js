@@ -16,7 +16,6 @@ function App() {
         newObj['email']=newData.email;
         newObj['name']=`${newData.name.title}. ${newData.name.first} ${newData.name.last}`;
         newObj['location']=newData.location;
-        console.log(newObj)
         setUser(newObj)
       });
   }, []);
